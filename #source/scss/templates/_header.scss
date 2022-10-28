@@ -1,0 +1,27 @@
+.container {
+    @include custom-container(1790px);
+    
+}
+.header-promo {
+    position: relative;
+    background: black;
+}
+.header-promo-text {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    opacity: 0.8;
+    padding: 13px 35px;
+}
+.close-promo {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    background: transparent;
+    cursor: pointer;
+}
