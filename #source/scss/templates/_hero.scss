@@ -1,0 +1,11 @@
+.hero {
+     padding-top: 100px;
+     padding-top: 500px;
+}
+.container-small {
+     @include custom-container(1200px);
+     
+ }
+ .main-text {
+     @include Saint-text(60px);
+ }

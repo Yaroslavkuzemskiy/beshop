@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Mrs Saint Delafield';
+    src: url('MrsSaintDelafield-Regular.eot');
+    src: local('Mrs Saint Delafield'), local('MrsSaintDelafield-Regular'),
+        url('MrsSaintDelafield-Regular.eot?#iefix') format('embedded-opentype'),
+        url('MrsSaintDelafield-Regular.woff2') format('woff2'),
+        url('MrsSaintDelafield-Regular.woff') format('woff'),
+        url('MrsSaintDelafield-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

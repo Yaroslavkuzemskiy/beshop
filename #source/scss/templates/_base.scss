@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
-
+@import url('../assets/fonts/stylesheet.css');
 *,
 *:before,
 *:after {
     box-sizing: border-box;
 }
-body, h1, p, ul, li{
+html, body {
+    height: 100%;
+}
+html, body, h1, p, ul, li, button{
     margin: 0;
     padding: 0;
+    
 }
 ul{
     list-style: none;
@@ -17,7 +21,14 @@ a {
 }
 
 .wrapper {
+    min-height: 100%;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    
+}
+main {
+    flex-grow: 1;
 }
 
 @mixin custom-container($width) {
@@ -25,4 +36,13 @@ a {
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
+}
+@mixin Saint-text($fs) {
+    font-family:  'Mrs Saint Delafield';
+    font-style: normal;
+    font-weight: 400;
+    font-size: $fs;
+    line-height: 100%;
+
+    color: #D05278;
 }

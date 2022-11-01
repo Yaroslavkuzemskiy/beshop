@@ -1,0 +1,154 @@
+.container-footer {
+    @include custom-container(1140px)
+}
+.footer {
+   
+    width: 100%;
+    background: #222222;
+    padding-top: 65px;
+    padding-bottom: 20px;
+}
+.footer-main {
+    display: grid;
+    grid-template-columns: min-content 1fr min-content;
+}
+.footer-main-logo {
+    text-align: center;
+}
+.footer-icons {
+    display: flex;
+    gap: 10px;
+}
+.find-descroption {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #999999;
+    padding-bottom: 15px;
+}
+.footer-main {
+    padding-bottom: 60px;
+    position: relative;
+    margin-bottom: 60px;
+    &::before {
+        content: '';
+        width: 100%;
+        max-width: 1140px;
+        height: 1px;
+        background-color: #FFFFFF;
+        opacity: .1;
+        position: absolute;
+        bottom: 0;
+        
+    }
+}
+
+.footer-menu {
+    position: relative;
+    display: grid;
+    gap: 45px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-bottom: 60px;
+    margin-bottom: 15px;
+    &::before {
+        content: '';
+        width: 100%;
+        max-width: 1140px;
+        height: 1px;
+        background-color: #FFFFFF;
+        opacity: .1;
+        position: absolute;
+        bottom: 0;
+    }
+}
+.title-main-head {
+    margin-bottom: 35px;
+    display: block;
+    font-family: 'Tenor Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    /* identical to box height, or 24px */
+
+    text-transform: capitalize;
+
+    color: #FFFFFF;
+}
+.submenu-link {
+    position: relative;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 200%;
+    color: #BBBBBB;
+    padding-left: 15px;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        background: url('../assets/icons/Vector.png');
+        width: 5px;
+        height: 8px;
+        left: 0;
+        top: 7px;
+        
+
+    }
+
+}
+.submenu-contact {
+    padding-left: 35px;
+}
+.contact-link {
+    position: relative;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+  
+    color: #BBBBBB;
+}
+.submenu-contact:not(:last-child){
+    padding-bottom: 20px;
+}
+.submenu-contact svg {
+    position: absolute;
+    left: -35px;
+    top: 5px;
+}
+.phone-link {
+    position: relative;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 170%;
+    
+    color: #FFFFFF;
+}
+.footer-copyright {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 170%;
+    color: #999999;
+    text-align: center;
+}
+
+@media (max-width: 1146px){
+    .footer-main {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr 1fr;
+        justify-items: center;
+        gap: 20px
+        }
+    .footer-main-logo{
+        grid-row: 1;
+        align-self: end;
+    }
+}

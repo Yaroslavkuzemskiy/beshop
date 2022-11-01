@@ -1,10 +1,17 @@
+.header {
+    position: fixed;
+    width: 100%;
+}
+// header promo
 .container {
     @include custom-container(1790px);
     
 }
+
 .header-promo {
     position: relative;
     background: black;
+    transition: all .3s ease-in-out;
 }
 .header-promo-text {
     font-family: 'Lato';
@@ -24,4 +31,179 @@
     top: 10px;
     background: transparent;
     cursor: pointer;
+    border: none;
+}
+
+// main header
+.header-main {
+    padding-top: 30px;
+    background: rgba(159 156 156 / 15%);
+    
+}
+.header-main-wrapper {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    column-gap: 75px;
+    align-items: center;
+
+}
+.header-grid {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+}
+.menu {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 60px;
+    justify-content: left;
+}
+.header-main-additional {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 45px;
+}
+.menu-item-link {
+    position: relative;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #222222;
+    transition: all .3s ease-in-out;
+    text-align: center;
+    text-transform: uppercase;
+    &:hover{
+        color: #D05278;
+        transition: all .3s ease-in-out;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        right: 31%;
+        top: -5px;
+        width: 25.45px;
+        height: 30px;
+        background: url('../assets/icons/hover.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: all .3s ease-in-out;
+    }
+    &:hover::before  {
+        
+        visibility: visible;
+        opacity: 1;
+        transition: all .3s ease-in-out;
+    }
+}
+   
+   
+.phone-btn{
+    display: none;
+   
+}
+.menu-item .active {
+    color: #D05278;
+}
+@media (max-width: 1146px) {
+    .header-main-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+        row-gap: 35px;
+        
+    }
+    .header-main {
+        background: none;
+        padding-bottom: 25px;
+    }
+    .menu {
+        grid-auto-flow: row;
+        justify-content: center;
+        row-gap: 25px;
+    }
+    .menu-item-link {
+        font-size: 26px;
+    }
+    .header-main-additional {
+        column-gap: 35px;
+        justify-content: center;
+        align-items: baseline;
+        margin-top: 35px
+    }
+    .header-promo-text{
+        line-height: 18px;
+    }
+    .header-main-logo {
+        position: relative;
+    }
+    .phone-btn {
+        display: block;
+        position: absolute;
+        border: none;
+        background: transparent;
+        top: 5px;
+        right: 0;
+        padding: 12px 0;
+        cursor: pointer;
+        .phone-burger{
+            width: 35px;
+            background: #222222;
+            height: 3px;
+            display: block;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 35px;
+                background: #222222;
+                top: 12px;
+                right: 0;
+                height: 3px;
+                transition: all .3s ease-in-out;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                width: 35px;
+                background: #222222;
+                top: -12px;
+                right: 0;
+                height: 3px;
+                transition: all .3s ease-in-out;
+            }
+        }
+    }
+    .phone-btn.opened .phone-burger{
+        background: transparent;
+        &::before {
+            transform-origin: left;
+            transform: rotate(-45deg) ;         
+        }
+        &::after {
+            transform-origin: left;
+            transform: rotate(45deg)  translateY(-1px)
+        }
+    }
+    .header-grid {
+        position: relative;
+        grid-template-columns: none;
+        max-height: 55vh;
+        left: 110%;
+        overflow: auto;
+        transition: all .5s ease-in-out;
+    }
+    .header-main-menu {
+        
+        transition: all .3s ease-in-out;
+        padding-top: 20px;
+       
+    }
+    .header-main-additional {
+        position: relative;
+        right: 106%;
+        
+        
+    }
 }
