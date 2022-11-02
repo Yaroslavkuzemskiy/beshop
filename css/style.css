@@ -226,9 +226,23 @@ main {
     line-height: 18px;
   }
 
+  .logo-link img {
+    position: relative;
+  }
+
   .header-main-logo {
     position: relative;
     z-index: 100;
+  }
+  .header-main-logo::before {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: -30px;
+    background: rgb(245, 227, 224);
+    width: 109%;
+    height: 100%;
+    padding: 50px;
   }
 
   .phone-btn {
@@ -302,6 +316,12 @@ main {
     background: rgb(245, 227, 224);
   }
 
+  .opened .header-grid {
+    -webkit-transition: left 0.5s;
+    transition: left 0.5s;
+    left: 0;
+  }
+
   .header-main-menu {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
@@ -317,6 +337,12 @@ main {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+
+  .opened .header-main-additional {
+    right: 0;
+    -webkit-transition: 1.1s ease-in-out;
+    transition: 1.1s ease-in-out;
   }
 }
 .hero {

@@ -12,6 +12,7 @@ function closePromoBlock(){
 
 
 // open close mobile menu
+
 const mainHeader = document.querySelector('.header')
 const mobileBtn = document.querySelector('.phone-btn')
 let mobileBtnOpened = document.querySelector('.phone-btn')
@@ -21,31 +22,12 @@ const headerGrid = document.querySelector('.header-grid')
 const headerMain = document.querySelector('.header-main')
 mobileBtn.addEventListener('click', openMenuMobile)
 function openMenuMobile(){
-    if (mobileBtnOpened.classList.contains('opened')){
-        mobileBtnOpened.classList.remove('opened')
-        headerGrid.style.left = 110 + '%'
-        additionaltMenu.style.right = 106 + '%'
-        // headerMain.style.boxShadow  =  'none'
-        // headerMain.style.background  =  'none'
+    if (mainHeader.classList.contains('opened')){
+        mainHeader.classList.remove('opened')
         
-        // headerGrid.style.background  =  'none'
-        additionaltMenu.style.transition = 'all .4s ease-in-out';
-        headerGrid.style.transition = 'all 1.1s ease-in-out';
-       
-        
-
     } else {
-        mobileBtnOpened.classList.add('opened')
-        headerGrid.style.left = 0
-        additionaltMenu.style.right = 0
-        additionaltMenu.style.transition = 'all 1.1s ease-in-out';
-        headerGrid.style.transition = 'all .5s ease-in-out';
-        
-        
-        // headerMain.style.boxShadow  =  '11px 200px 30px 11px rgb(74 74 76 / 90%)'
-        
-        // headerGrid.style.background  =  '#f5e3e0'
-        
+        mainHeader.classList.add('opened')
+      
     }
 }
 
