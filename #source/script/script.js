@@ -25,11 +25,13 @@ function openMenuMobile(){
         mobileBtnOpened.classList.remove('opened')
         headerGrid.style.left = 110 + '%'
         additionaltMenu.style.right = 106 + '%'
-        headerMain.style.boxShadow  =  'none'
-        headerMain.style.background  =  'none'
+        // headerMain.style.boxShadow  =  'none'
+        // headerMain.style.background  =  'none'
+        
+        // headerGrid.style.background  =  'none'
         additionaltMenu.style.transition = 'all .4s ease-in-out';
         headerGrid.style.transition = 'all 1.1s ease-in-out';
-        mainHeader.style.zIndex = '0'
+       
         
 
     } else {
@@ -38,9 +40,12 @@ function openMenuMobile(){
         additionaltMenu.style.right = 0
         additionaltMenu.style.transition = 'all 1.1s ease-in-out';
         headerGrid.style.transition = 'all .5s ease-in-out';
-        headerMain.style.boxShadow  =  '11px 200px 30px 11px rgb(74 74 76 / 90%)'
-        headerMain.style.background  =  '#f5e3e0'
-        mainHeader.style.zIndex = '100'
+        
+        
+        // headerMain.style.boxShadow  =  '11px 200px 30px 11px rgb(74 74 76 / 90%)'
+        
+        // headerGrid.style.background  =  '#f5e3e0'
+        
     }
 }
 

@@ -45,6 +45,7 @@ main {
 .header {
   position: fixed;
   width: 100%;
+  z-index: 100;
 }
 
 .container {
@@ -183,10 +184,8 @@ main {
 
 @media (max-width: 1146px) {
   .header-main-wrapper {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
     text-align: center;
-    row-gap: 35px;
+    display: block;
   }
 
   .header-main {
@@ -219,12 +218,17 @@ main {
     margin-top: 35px;
   }
 
+  .header-promo {
+    z-index: 10000;
+  }
+
   .header-promo-text {
     line-height: 18px;
   }
 
   .header-main-logo {
     position: relative;
+    z-index: 100;
   }
 
   .phone-btn {
@@ -284,25 +288,35 @@ main {
   }
 
   .header-grid {
-    position: relative;
+    position: absolute;
     -ms-grid-columns: none;
     grid-template-columns: none;
-    max-height: 55vh;
+    top: 0;
     left: 110%;
+    width: 100%;
     overflow: auto;
+    padding-bottom: 15px;
+    height: 100vh;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
+    background: rgb(245, 227, 224);
   }
 
   .header-main-menu {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    padding-top: 20px;
+    padding-top: 160px;
   }
 
   .header-main-additional {
     position: relative;
     right: 106%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 .hero {
