@@ -346,8 +346,8 @@ main {
   }
 }
 .hero {
-  padding-top: 100px;
-  padding-top: 500px;
+  padding-top: 290px;
+  padding-bottom: 237px;
 }
 
 .container-small {
@@ -366,7 +366,45 @@ main {
   color: #D05278;
 }
 
-.container-footer {
+.hero-main {
+  max-width: 690px;
+}
+
+.big-text {
+  font-family: "Tenor Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 100%;
+  color: #222222;
+  margin-bottom: 20px;
+}
+
+.p-big {
+  max-width: 456px;
+  font-family: "Tenor Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+.btn {
+  color: white;
+  background: #222222;
+  padding: 23px 50px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.container-middle {
   max-width: 1140px;
   margin: 0 auto;
   padding-left: 15px;
