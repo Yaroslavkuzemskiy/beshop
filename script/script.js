@@ -61,3 +61,86 @@ openCloseBtn.forEach((item, i) =>
         
     }
     ))
+
+ //tabs for product section
+// const tabs = document.querySelectorAll(".tabs-header-item")
+const tabs = document.querySelectorAll(".tabs-header")
+
+
+tabs.forEach((tab, index) => {
+    const buttons = tab.querySelectorAll('.tabs-header-item')
+    const content = tab.nextElementSibling.querySelectorAll('.tabs-content-main')
+    
+    const firstPageSlider = content[0].querySelector('.products-slider')
+
+    initSlider(firstPageSlider)
+
+    buttons.forEach((btn, i)=> {
+        btn.addEventListener("click", () => {
+            const targetTab = content[i]
+
+            if(!btn.classList.contains('tabs-active')){
+                const targetSlaider = targetTab.querySelector('.products-slider')
+                initSlider(targetSlaider)
+                buttons.forEach(b => b.classList.remove('tabs-active'))
+                content.forEach(c => c.classList.remove('content-active'))
+                btn.classList.add('tabs-active')
+                targetTab.classList.add('content-active')
+            }
+            // tabs.forEach((item, i) => {
+                
+                
+            //     if (item.classList.contains('tabs-active')) {
+            //         item.classList.remove('tabs-active')
+            //         content[i].classList.remove('content-active', 'swiper-wrapper')
+            //     }
+    
+            // })
+            // tab.classList.add('tabs-active');
+            // content[index].classList.add('content-active')
+            // content[index].classList.add('swiper-wrapper')
+            // initSlider(contentParts[index]);
+        })
+    })
+   
+})
+
+
+//slider product
+
+function initSlider(element) {
+    if (element && !element.classList.contains('swiper-initialized')) {
+        const swiper = new Swiper(element, {
+            // Optional parameters
+            
+            loop: true,
+            // autoplay: {
+            //   delay: 5000,
+            // },
+            slidesPerView: 4,
+            spaceBetween: 30,
+        
+            breakpoints: {
+              // when window width is >= 320px
+              320: {
+                slidesPerView: 3,
+                spaceBetween: 20
+              },
+              // when window width is >= 480px
+              1200: {
+                slidesPerView: 4,
+                spaceBetween: 30
+              },
+            
+             },
+            // If we need pagination
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+        
+        
+            
+          });
+    }
+}
