@@ -1,0 +1,36 @@
+.discount {
+    padding-top: 270px;
+    padding-bottom: 210px;
+}
+.discount-main {
+    max-width: 560px;
+    margin-left: 50%;
+
+}
+
+
+@media (max-width: 740px) {
+    .discount-main {
+        
+        margin-left: 0;
+    
+    }
+}
+
+.discount-main span {
+    color: #D05278;
+    position: relative;
+    display: inline-block;
+
+    &::before {
+        content: '';
+        background: url('../assets/Vectorobject.png');
+        position: absolute;
+        left: 0;
+        top: -25px;
+        width: 150%;
+        height: 150%;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}

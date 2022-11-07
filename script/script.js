@@ -121,8 +121,18 @@ function initSlider(element) {
             spaceBetween: 30,
         
             breakpoints: {
+                 // when window width is >= 320px
+              300: {
+                slidesPerView: 1,
+                spaceBetween: 20
+              },
               // when window width is >= 320px
-              320: {
+              485: {
+                slidesPerView: 2,
+                spaceBetween: 20
+              },
+               // when window width is >= 320px
+               769: {
                 slidesPerView: 3,
                 spaceBetween: 20
               },

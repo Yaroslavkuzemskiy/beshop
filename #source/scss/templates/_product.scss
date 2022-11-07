@@ -28,7 +28,8 @@
 
 .tabs-header {
     display: grid;
-    grid-auto-flow: column;
+    
+    grid-template-columns: repeat(auto-fit, minmax(130px, max-content));
     grid-auto-columns: max-content;
     justify-content: center;
     gap: 15px;
