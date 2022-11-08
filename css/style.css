@@ -828,3 +828,207 @@ h2, h1 {
   background-repeat: no-repeat;
   background-size: contain;
 }
+
+.advantages {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.container-advantages {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.advantages-main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.advantage-main-title {
+  font-family: "Tenor Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  padding-top: 55px;
+  /* identical to box height, or 42px */
+  text-align: center;
+  text-transform: capitalize;
+  color: #222222;
+}
+
+.advantage-main-image {
+  text-align: center;
+  position: relative;
+}
+.advantage-main-image::before {
+  content: "";
+  background: url("../assets/Vectorobject.png");
+  position: absolute;
+  left: 37%;
+  top: -5px;
+  width: 110%;
+  height: 110%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.advantage-main-text {
+  text-align: center;
+  padding: 0 20px;
+}
+
+@media (max-width: 950px) {
+  .advantage-main-image::before {
+    left: 33%;
+  }
+}
+@media (max-width: 750px) {
+  .advantages-main {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .advantage-main-image::before {
+    left: 43%;
+  }
+}
+@media (max-width: 510px) {
+  .advantage-main-image::before {
+    left: 38%;
+  }
+}
+.categories-main-header {
+  max-width: 480px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.categories {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.categories-main-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding-top: 50px;
+}
+
+.categories-main-images-item {
+  position: relative;
+}
+.categories-main-images-item img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+@media (hover) {
+  .categories-overlay {
+    position: absolute;
+    background: rgba(177, 174, 174, 0.6);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  .categories-overlay:hover {
+    opacity: 1;
+  }
+}
+@media (hover: none) {
+  .categories-overlay {
+    position: absolute;
+    background: rgba(177, 174, 174, 0.6);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+  }
+}
+.overlay-items {
+  position: absolute;
+  font-family: "Tenor Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+  text-align: center;
+  text-transform: capitalize;
+  color: #222222;
+  left: calc(40% - 10px);
+  bottom: 50%;
+}
+
+.overlay-text {
+  position: relative;
+  max-width: 150px;
+  z-index: 2;
+}
+.overlay-text::before {
+  content: "";
+  background: url("../assets/categories/bg.png");
+  position: absolute;
+  left: 5%;
+  top: -10px;
+  width: 105%;
+  height: 200%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+}
+
+.overlay-link {
+  padding-top: 50px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 170%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.overlay-link a {
+  color: #FFFFFF;
+  position: relative;
+  padding-bottom: 5px;
+}
+.overlay-link a::before {
+  content: "";
+  background: url("../assets/categories/Arrow 1.png");
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  width: 50%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (max-width: 1024px) {
+  .overlay-items {
+    left: 32%;
+    bottom: 40%;
+  }
+}
+@media (max-width: 900px) {
+  .categories-main-images {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .overlay-items {
+    left: 39%;
+  }
+}
+@media (max-width: 700px) {
+  .categories-main-images {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .overlay-items {
+    left: 32%;
+  }
+}

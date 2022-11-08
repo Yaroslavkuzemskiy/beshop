@@ -1,0 +1,70 @@
+.advantages {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+.container-advantages {
+    @include custom-container(1120px);
+
+}
+.advantages-main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.advantage-main-title {
+    font-family: 'Tenor Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    padding-top: 55px;
+    /* identical to box height, or 42px */
+
+    text-align: center;
+    text-transform: capitalize;
+
+    color: #222222;
+}
+.advantage-main-image {
+    text-align: center;
+    position: relative;
+    &::before {
+        content: '';
+        background: url('../assets/Vectorobject.png');
+        position: absolute;
+        left: 37%;
+        top: -5px;
+        width: 110%;
+        height: 110%;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+}
+.advantage-main-text {
+    text-align: center;
+    padding: 0 20px;
+}
+@media (max-width:950px) {
+    .advantage-main-image{
+        &::before{
+            left: 33%;
+        }
+    }
+}
+@media (max-width:750px) {
+    .advantages-main {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .advantage-main-image{
+        &::before{
+            left: 43%;
+        }
+    }
+}
+@media (max-width:510px) {
+    .advantage-main-image{
+        &::before{
+            left: 38%;
+        }
+    }
+}
