@@ -1,0 +1,40 @@
+.image-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    
+    
+    z-index: 1;
+}
+.image-lable-sale {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #A3D2A2;
+    padding: 10px 25px;
+}
+.image-lable-new {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: rgba(208, 82, 120, 0.7);
+    padding: 10px 25px;
+}
