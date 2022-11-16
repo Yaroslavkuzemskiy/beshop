@@ -1,0 +1,74 @@
+.testimonials {
+    padding-top: 30px;
+    padding-bottom: 90px;
+}
+.container-testimonials {
+    @include custom-container(850px);
+}
+.testimonials-header {
+    text-align: center;
+}
+.testimonials-main-item-text {
+    font-family: 'Tenor Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    color: #666666;
+    padding: 60px 135px ;
+}
+.testimonials-main-item-name {
+    font-family: 'Tenor Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: capitalize;
+    color: #222222;
+}
+.testimonials-main-item-image {
+    text-align: center;
+    margin-bottom: 10px;
+    img {
+        border-radius: 25px;
+    }
+}
+.testimonials-main {
+    position: relative;
+}
+.testimonial-main-swiper {
+    overflow: hidden;
+}
+.testimonial-main-swiper .swiper-button-next, .testimonial-main-swiper .swiper-button-prev {
+    top: 32%;
+    background: #FAF9FF;
+    &::after {
+        font-size: 23px;
+    }
+}
+.testimonial-main-swiper .swiper-button-prev {
+    left: -45px;
+}
+.testimonial-main-swiper .swiper-button-next {
+    right: -45px;
+}
+@media (max-width: 950px) {
+    .testimonial-main-swiper .swiper-button-prev {
+        left: 10px;
+    }
+    .testimonial-main-swiper .swiper-button-next {
+        right: 10px;
+    }
+    .testimonials-main-item-text {
+        font-family: 'Tenor Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 150%;
+        text-align: center;
+        color: #666666;
+        padding: 60px 60px ;
+    }
+}

@@ -154,3 +154,34 @@ function initSlider(element) {
           });
     }
 }
+
+
+//slider Testimoniaals
+const sliderTestimonials = document.querySelector('.testimonial-main-swiper')
+function initSliderTestimonials(testimonials) {
+    if (testimonials && !testimonials.classList.contains('swiper-initialized')) {
+        const swiper = new Swiper(testimonials, {
+            // Optional parameters
+            
+            loop: true,
+            // autoplay: {
+            //   delay: 5000,
+            // },
+            slidesPerView: 1,
+            
+        
+            
+            
+             
+            // If we need pagination
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+        
+             
+            
+          });
+    }
+}
+initSliderTestimonials(sliderTestimonials)

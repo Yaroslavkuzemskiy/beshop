@@ -4,12 +4,13 @@
     &::before{
         content: '';
         position: absolute;
-        width: 100%;
+        width: 32%;
         height: 100%;
         left: 10px;
         background: url('../assets/form/img.png');
         background-repeat: no-repeat;
         top: 7px;
+        left: 70px;
         z-index: 0;
     }
 }

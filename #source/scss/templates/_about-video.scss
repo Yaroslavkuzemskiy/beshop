@@ -16,5 +16,47 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 135px;
+    margin-top: 100px;
 }
+.boxes-count {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 100%;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+    color: #D05278;
+    
+}
+.boxes-text {
+    font-family: 'Tenor Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+    color: #222222;
+    padding-top: 30px;
+}
+@media (max-width: 1070px) {
+    .about-video-boxes {
+        
+        grid-template-columns: repeat(2, 1fr);
+        gap: 100px;
+        
+    }
+}
+@media (max-width: 500px) {
+    .about-video-boxes {
+        
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px;
+        
+    }
+}
+
    
