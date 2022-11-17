@@ -7,19 +7,23 @@
     padding-bottom: 130px;
 }
 .logos-main {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 70px;
+    display: flex;
+    justify-content: space-between;
+   
 }
 @media (max-width: 1199px) {
     .logos-main {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
+        gap: 50px;
     }
 }
 @media (max-width: 600px) {
     .logos-main {
+        display: grid;
         grid-template-columns: repeat(1, 1fr);
         justify-items: center;
+        gap: 50px;
     }
 }

@@ -1,0 +1,10 @@
+.map img {
+    vertical-align: bottom;
+    height: 400px;
+     width: 100%;
+}
+@media (max-width: 900px) {
+    .map img {
+        height: 200px;
+    } 
+}

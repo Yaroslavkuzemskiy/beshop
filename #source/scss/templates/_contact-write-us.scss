@@ -1,0 +1,35 @@
+.form-write-holder {
+    margin-top: 50px;
+}
+
+.form-write-holder .form-input {
+    width: 470px;
+    margin-bottom: 10px;
+}
+textarea{
+    height: 120px;
+}
+@media (max-width: 960px) {
+    .form-write-holder .form-input {
+        width: 350px;
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 740px) {
+    .form-write-holder .form-input {
+        width: 470px;
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 510px) {
+    .form-write-holder .form-input {
+        width: 320px;
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 320px) {
+    .form-write-holder .form-input {
+        width: 280px;
+        margin-bottom: 10px;
+    }
+}

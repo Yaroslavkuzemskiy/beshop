@@ -21,6 +21,7 @@
      line-height: 100%;
      color: #222222;
      margin-bottom: 20px;
+     text-transform: capitalize;
  }
  .p-big {
      max-width: 456px;
@@ -43,4 +44,11 @@
      text-transform: uppercase;
      display: inline-block;
      margin-top: 30px;
+ }
+ @media (max-width: 320px) {
+    .big-text {
+       
+        font-size: 60px;
+        
+    }
  }

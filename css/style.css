@@ -336,6 +336,7 @@ h2, h1 {
   line-height: 100%;
   color: #222222;
   margin-bottom: 20px;
+  text-transform: capitalize;
 }
 
 .p-big {
@@ -362,6 +363,11 @@ h2, h1 {
   margin-top: 30px;
 }
 
+@media (max-width: 320px) {
+  .big-text {
+    font-size: 60px;
+  }
+}
 .container-middle {
   max-width: 1140px;
   margin: 0 auto;
@@ -783,21 +789,24 @@ h2, h1 {
 }
 
 .logos-main {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 70px;
+  display: flex;
+  justify-content: space-between;
 }
 
 @media (max-width: 1199px) {
   .logos-main {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
+    gap: 50px;
   }
 }
 @media (max-width: 600px) {
   .logos-main {
+    display: grid;
     grid-template-columns: repeat(1, 1fr);
     justify-items: center;
+    gap: 50px;
   }
 }
 .discount {
@@ -1737,5 +1746,112 @@ h2, h1 {
     text-align: center;
     color: #666666;
     padding: 60px 60px;
+  }
+}
+.title {
+  padding-top: 245px;
+  padding-bottom: 70px;
+}
+
+.title-main-content .lato-small {
+  max-width: 100%;
+}
+
+.content-head {
+  font-family: "Tenor Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 130%;
+  text-transform: capitalize;
+  color: #222222;
+}
+
+.socials-head {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 170%;
+  color: #222222;
+  align-self: end;
+}
+
+.title-main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.socials-holder {
+  display: flex;
+  gap: 10px;
+}
+
+.title-main-socials {
+  display: grid;
+  justify-content: end;
+  gap: 10px;
+  padding-left: 25px;
+}
+
+@media (max-width: 800px) {
+  .title {
+    padding-top: 100px;
+  }
+  .title-main {
+    row-gap: 30px;
+    grid-template-columns: 1fr;
+  }
+  .title-main-socials {
+    justify-content: center;
+    padding-left: 0px;
+  }
+}
+.form-write-holder {
+  margin-top: 50px;
+}
+
+.form-write-holder .form-input {
+  width: 470px;
+  margin-bottom: 10px;
+}
+
+textarea {
+  height: 120px;
+}
+
+@media (max-width: 960px) {
+  .form-write-holder .form-input {
+    width: 350px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 740px) {
+  .form-write-holder .form-input {
+    width: 470px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 510px) {
+  .form-write-holder .form-input {
+    width: 320px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 320px) {
+  .form-write-holder .form-input {
+    width: 280px;
+    margin-bottom: 10px;
+  }
+}
+.map img {
+  vertical-align: bottom;
+  height: 400px;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .map img {
+    height: 200px;
   }
 }
