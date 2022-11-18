@@ -23,7 +23,7 @@
 } 
 
 .big-indent {
-    padding-top: 170px;
+    padding-top: 120px;
     padding-bottom: 170px;
 }
 @media (hover) {
@@ -138,6 +138,15 @@
 }
 
 @media (max-width:700px) {
+    
+    .overlay-items {
+       
+        left: calc(38%);
+        
+    
+    }
+}
+@media (max-width:600px) {
     .categories-main-images {
         
         grid-template-columns: repeat(1, 1fr);
