@@ -10,7 +10,7 @@
 .categories-main-images {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 20px;
     padding-top: 50px;
 }
 
@@ -22,6 +22,10 @@
     }
 } 
 
+.big-indent {
+    padding-top: 170px;
+    padding-bottom: 170px;
+}
 @media (hover) {
     
 .categories-overlay {
