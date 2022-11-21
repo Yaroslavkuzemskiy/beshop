@@ -1,0 +1,127 @@
+.faq {
+    padding-top: 170px;
+}
+
+.faq-main-list {
+    
+    li {
+        position: relative;
+        font-family: 'Tenor Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 150%;
+        color: #222222;
+        margin-bottom: 70px;
+        transition: all .3s ease-in-out;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 95%;
+            bottom: -15px;
+            left: 20px;
+            border: 1px solid #EEEEEE;
+        }
+
+        &::marker {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 170%;
+            color: #222222;
+           
+        }
+
+        padding-left: 45px;
+
+       
+    }
+}
+.faq-main-list p {
+    position: relative;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 170%;
+    color: #666666;
+    padding-left: 100px;
+    padding-right: 120px;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-in-out;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 95%;
+        bottom: 20px;
+        left: 20px;
+        border: 1px solid #EEEEEE;
+    }
+
+}
+.list-pseudo {
+    
+    background: url('../assets/Vectorobject.png');
+    position: absolute;
+    left: -29px;
+    top: 2px;
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.list-open {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #FAF9FF;
+    border-radius: 50%;
+    right: 0;
+    top: 26px;
+    border: 1px solid #EEEEEE;
+    cursor: pointer;
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 1px;
+        border: 1px solid black;
+        left: calc(50% - 5px) ;
+        top: 50%;
+        transition: all .3s ease-in-out;
+    }
+    &::after {
+        transform: rotate(90deg);
+    }
+
+}
+.faq-main-list li.active {
+    color: #D05278;
+    transition: all .3s ease-in-out;
+}
+.faq-main-list .active + p {
+    transition: all .3s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+}
+.faq-main-list li.active .list-open::after{
+    transform: rotate(0deg);
+    transition: all .3s ease-in-out;
+}
+@media (max-width: 450px) {
+    .faq-main-list li {
+        padding-right: 35px;
+    }
+    .list-open {
+        top: 0;
+    }
+    .faq-main-list p {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

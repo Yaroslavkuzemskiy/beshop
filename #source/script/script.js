@@ -185,3 +185,54 @@ function initSliderTestimonials(testimonials) {
     }
 }
 initSliderTestimonials(sliderTestimonials)
+
+//FAQ burger
+
+const listOpenDiv = document.querySelectorAll('.list-open')
+const paragraphHeight = document.querySelectorAll('.faq-main-list  p')
+const allLists = document.querySelectorAll('.faq-main-list li')
+
+listOpenDiv.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+        if(!allLists[index].classList.contains('active')){
+            allLists.forEach((a, index2) => {
+                a.classList.remove('active')
+                
+                paragraphHeight[index2].style.height = 0 +'px'
+                // paragraphHeight[index2].style.paddingTop = 0 +'px'
+        })
+            allLists[index].classList.add('active')
+            // paragraphHeight[index].style.height = paragraphHeight[index].offsetHeight + 'px'
+            paragraphHeight[index].style.height = 'auto'
+
+            let realHeight = paragraphHeight[index].offsetHeight + 70
+            paragraphHeight[index].style.height = 0 + 'px'
+           
+
+            paragraphHeight[index].style.height = realHeight + 'px'
+            // paragraphHeight[index].style.paddingTop = 70 +'px'
+            
+        } else {
+            allLists[index].classList.remove('active')
+            paragraphHeight[index].style.height = 0 +'px'
+            // paragraphHeight[index].style.paddingTop = 0 +'px'
+        }
+    })
+})
+
+addEventListener('load', ()=> {
+    allLists.forEach((btn, index) => {
+        
+            if(btn.classList.contains('active')){
+                paragraphHeight[index].style.height = 'auto'
+                let realHeight = paragraphHeight[index].offsetHeight + 70
+                paragraphHeight[index].style.height = 0 + 'px'
+                
+    
+                paragraphHeight[index].style.height = realHeight + 'px'
+                
+                // paragraphHeight[index].style.paddingTop = 70 +'px'
+            } 
+       
+    })
+})
