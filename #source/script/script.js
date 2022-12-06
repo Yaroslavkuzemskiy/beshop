@@ -236,3 +236,52 @@ addEventListener('load', ()=> {
        
     })
 })
+
+//range slider
+const rangeInput = document.querySelectorAll('.price-slider-bar input')
+const progress = document.querySelector(".progress")
+const priceInput = document.querySelectorAll('.price-slider-values input')
+
+priceInput.forEach(input => {
+    input.addEventListener('input', e => {
+        let minVal = parseInt(priceInput[0].value)
+        let maxVal = parseInt(priceInput[1].value)
+        
+
+        if((maxVal - minVal >= 200) && maxVal <= 10000){
+            if(e.target.className === 'input-min'){
+                rangeInput[0].value = minVal 
+                progress.style.left = (minVal/rangeInput[0].max) * 100 + '%';
+                
+            }else {
+                
+                rangeInput[1].value = maxVal 
+                progress.style.right = 100 - (maxVal/rangeInput[1].max) * 100 + '%';
+            }
+        }
+       
+      
+       
+    })
+})
+
+rangeInput.forEach(input => {
+    input.addEventListener('input', e => {
+        let minVal = parseInt(rangeInput[0].value)
+        let maxVal = parseInt(rangeInput[1].value)
+
+        if(maxVal - minVal < 200){
+            if(e.target.className === 'range-min'){
+                rangeInput[0].value = maxVal - 200
+            }else {
+                rangeInput[1].value = minVal + 200
+            }
+        }else {
+            priceInput[0].value = minVal
+            priceInput[1].value = maxVal
+            progress.style.left = (minVal/rangeInput[0].max) * 100 + '%';
+            progress.style.right = 100 - (maxVal/rangeInput[1].max) * 100 + '%';
+        }
+       
+    })
+})
