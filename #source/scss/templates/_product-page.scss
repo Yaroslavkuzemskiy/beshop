@@ -179,6 +179,16 @@ hr {
   }
 }
 
+.color-title {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 170%;
+  padding-bottom: 25px;
+
+  color: #222222;
+}
 .color {
   position: absolute;
   width: 1px;
@@ -189,7 +199,9 @@ hr {
 }
 .color:checked + span {
   outline: 2px solid black;
+ 
   outline-offset: 1px;
+  
 }
 
 .color-red {
@@ -200,4 +212,45 @@ hr {
 }
 .color-blue {
   background-color: blue;
+}
+.description-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.count-title {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 170%;
+  padding-bottom: 10px;
+  color: #222222;
+  margin-right: 15px;
+}
+.count-field {
+  max-width: 80px;
+  height: 40px;
+  font-size: 18px;
+}
+.description-menu-count {
+  display: grid;
+  align-content: end;
+  justify-items: end;
+}
+.product-detail-description {
+  display: flex;
+  flex-direction: column;
+}
+hr {
+  width: 100%;
+}
+.description-btns {
+  margin-top: auto;
+  display: flex;
+  gap: 10px;
+  .grey{
+    background: #FAF9FF;
+    border: 1px solid #EEEEEE;
+    color: #222222;
+  }
 }

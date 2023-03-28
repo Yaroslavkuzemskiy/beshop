@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <title>BeShop</title>
 </head>
@@ -121,7 +123,7 @@
         <main>
     <section class="hero" style="background-image: url('assets/bg.png');">
         <div class="container-middle">
-            <div class="hero-main">
+            <div class="hero-main wow slideInLeft">
                 <div class="main-text">Professional</div>
                 <div class="big-text">Beauty & Care</div>
                 <p class="p-big">Nourish your skin with toxin-free cosmetic products. With the offers that you can’t refuse.</p>
@@ -132,7 +134,7 @@
         </div>
     </section> <section class="product">
     <div class="container-big">
-        <div class="product-main">
+        <div class="product-main wow slideInUp">
             <div class="main-text-general">Cosmetics</div>
             <h2>Trending products</h2>
                 <p class="lato-small">Nourish your skin with toxin-free cosmetic products. With the offers that you
@@ -562,7 +564,7 @@
     </div>
 </section>    <section class="logos">
         <div class="container-logos">
-            <div class="logos-main">
+            <div class="logos-main wow zoomIn">
                 <div class="logos-main-item">
                     <img src="./assets/1.jpg" alt="">
                 </div>
@@ -583,7 +585,7 @@
         
     </section>    <section class="discount" style="background-image: url('assets/bg.png');">
         <div class="container-middle">
-            <div class="hero-main discount-main">
+            <div class="hero-main discount-main wow zoomIn">
                 <div class="main-text">Discount</div>
                 <div class="big-text">Get Your <span>50%</span>  Off</div>
                 <p class="p-big">Nourish your skin with toxin-free cosmetic products. With the offers that you can’t refuse.</p>
@@ -1266,8 +1268,12 @@
 
     </footer>        
     </div>
+    <script src="./script/wow.min.js"></script>
+   
     <script src="https://cdn.jsdelivr.net/npm/swiper@7/swiper-bundle.min.js"></script>
     <script src="./script/script.js"></script>
-   
+    <script>
+        new WOW().init();
+        </script>
 </body>
 </html>
