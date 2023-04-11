@@ -1669,6 +1669,8 @@ h2, h1 {
 }
 .video-main {
   text-align: center;
+  max-width: 487px;
+  margin: 0 auto;
 }
 
 .about-video {
