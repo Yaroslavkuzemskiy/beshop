@@ -1545,6 +1545,7 @@ h2, h1 {
 
 .insta-main-item {
   position: relative;
+  border: 0.1px solid;
 }
 .insta-main-item img {
   vertical-align: bottom;
